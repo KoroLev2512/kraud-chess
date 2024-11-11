@@ -36,13 +36,38 @@ export const Session = () => {
                         </tr>
                         <tr>
                             <td className={styles.label}>Взнос на телеграммы:</td>
-                            <td><span className={styles.oldPrice}>100 руб.</span> <span className={styles.bold}>21 руб. 16 коп.</span></td>
+                            <td><span className={styles.oldPrice}>100 руб.</span> <span className={styles.bold}>21 руб. 16 коп.</span>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
-                    <p className={styles.contact}>По всем вопросам обращайтесь в администрацию к К. Михельсону</p>
                 </div>
+                <div className={styles.mobile}>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td className={styles.label}>Место проведения: <span className={styles.bold}>Клуб «Картонажник»</span></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.label}>Дата и время мероприятия: <span className={styles.bold}>22 июня 1927 г. в 18:00</span></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.label}>Стоимость входных билетов: <span className={styles.bold}>20 коп.</span></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.label}>Плата за игру: <span className={styles.bold}>50 коп.</span></td>
+                        </tr>
+                        <tr>
+                            <td className={styles.lastLabel}>Взнос на телеграммы:
+                                <span className={styles.oldPrice}> 100 руб.</span>
+                                <span className={styles.bold}>21 руб. 16 коп.</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p className={styles.contact}>По всем вопросам обращайтесь в администрацию к К. Михельсону</p>
             </div>
         </div>
-    );
+    )
 };

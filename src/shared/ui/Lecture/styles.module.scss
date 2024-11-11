@@ -24,5 +24,41 @@
 }
 
 .image {
+  max-width: 800px;
+}
 
+@media (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .text {
+    font-size: 28px;
+  }
+
+  .image {
+    max-width: 600px;
+  }
+
+  .full {
+    display: none;
+  }
+
+  .mobile {
+    color: #313131;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Merriweather, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    text-transform: uppercase;
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
 }

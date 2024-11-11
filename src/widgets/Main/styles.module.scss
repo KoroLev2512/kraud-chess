@@ -2,17 +2,23 @@
 @import "@/app/styles/variables";
 
 .bg {
-  background: #d6ba99;
+  position: relative;
+  height: 70dvh;
+  background-color: #cdc1a3;
   background-image: url('/../images/bg.svg');
   background-blend-mode: overlay;
   padding: 0 72px;
   background-size: cover;
-  background-position: center;
+  width: 100dvw;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .wrapper {
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .content {
@@ -21,8 +27,27 @@
 }
 
 .image {
-    margin: 0 0 -30px 0;
-    width: 250%;
+  display: block;
+  bottom: -30px;
+  //width: 100%;
+  max-height: 100%;
+  right: -30px;
+  //top: 0;
+  position: absolute;
+  //margin: 0 0 -30px 0;
+  //width: 100%;
+  z-index: 0;
+}
+
+@media (max-width: 1150px) {
+  .bg {
+    height: 80dvh;
+    //padding: 18px 28px;
+  }
+
+  .image {
+    width: 150%;
+  }
 }
 
 @media (max-width: 720px) {

@@ -20,6 +20,10 @@
 }
 
 .image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
   margin-left: -40px;
 }
 
@@ -88,4 +92,86 @@
 .label {
   opacity: 0.7;
   font-weight: 400;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .text {
+    font-size: 28px;
+    padding-bottom: 24px;
+  }
+
+  .image {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+  }
+
+  .table {
+    display: none;
+  }
+
+  .contact {
+    font-size: 18px;
+  }
+
+  .mobile table {
+    font-family: "Golos Text", serif;
+    font-size: 16px;
+    color: #313131;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .mobile table tr {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .label {
+    padding: 10px 0;
+    opacity: 1;
+    font-weight: 400;
+    color: rgba(49, 49, 49, 0.7);
+    border-bottom: 2px solid #d0d0d0;
+  }
+
+  .bold {
+    font-weight: 600;
+    color: #313131;
+  }
+
+  .oldPrice {
+    text-decoration: line-through;
+    text-decoration-color: #F54932;
+    color: #313131;
+    margin: 0 10px;
+    font-weight: 600;
+  }
+
+  .contact {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #3057A2;
+    text-align: left;
+  }
+
+  .lastLabel {
+    padding: 10px 0;
+    opacity: 1;
+    font-weight: 400;
+    color: rgba(49, 49, 49, 0.7);
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobile {
+    display: none;
+  }
 }

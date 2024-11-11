@@ -8,11 +8,17 @@
   font-weight: 400;
   line-height: 120%;
   opacity: 0.6;
-  padding: 72px 40px 72px 72px;
 }
 
 .wrapper {
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 72px 40px 72px 72px;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    padding: 40px 20px 60px;
+  }
 }

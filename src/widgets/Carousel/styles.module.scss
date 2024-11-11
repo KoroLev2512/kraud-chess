@@ -143,16 +143,8 @@
   background-color: transparent;
 }
 
-@media (max-width: 720px) {
-  .title {
-
-  }
-
-  .content {
-
-  }
-
-  .image {
-    width: 80%;
+@media (max-width: 1000px) {
+  .wrapper {
+    padding: 20px;
   }
 }

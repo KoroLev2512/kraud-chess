@@ -8,18 +8,24 @@ export const Lecture = () => {
                 <div>
                     Чтобы поддержать Международный васюкинский турнир
                 </div>
-                <div>
-                    посетите лекцию на тему:
+                <div className={styles.full}>
+                    {'посетите лекцию на тему: '}
+                    <span className={styles.red}>
+                        «Плодотворная дебютная идея»
+                    </span>
                 </div>
-                <span className={styles.red}>
-                    «Плодотворная дебютная идея»
-                </span>
             </div>
             <img
                 className={styles.image}
                 src="/images/lecture.svg"
                 alt="lecture"
             />
+            <div className={styles.mobile}>
+                {'посетите лекцию на тему: '}
+                <span className={styles.red}>
+                     «Плодотворная дебютная идея»
+                </span>
+            </div>
         </div>
     );
 };

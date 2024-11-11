@@ -5,6 +5,8 @@
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
   color: #313131;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Merriweather, serif;
@@ -27,7 +29,7 @@
   font-family: "Golos Text", serif;
   font-style: normal;
   line-height: 120%;
-  margin-left: 10px;
+  //margin-left: 10px;
   text-transform: none;
 }
 
@@ -53,6 +55,9 @@
 .div7 { grid-area: 3 / 2 / 4 / 4; }
 
 .stageCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #313131;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: "Golos Text", serif;
@@ -60,13 +65,16 @@
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
-  background-color: #f5f0e6;
+  background-color: rgba(205, 193, 163, 0.9);
+  background-image: url('/../images/cardBG.svg');
+  background-blend-mode: overlay;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   text-align: left;
 }
+
 
 .stageNumber {
   background-color: white;
@@ -95,3 +103,21 @@
   font-size: 18px;
   line-height: 1.4;
 }
+
+.stageCard img {
+  margin-left: 10px;
+  height: auto;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    padding: 20px;
+  }
+
+  .transformationStages {
+    display: none;
+  }
+}
+
+
+
