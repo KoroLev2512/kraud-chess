@@ -3,7 +3,7 @@
 
 .bg {
   position: relative;
-  height: 70dvh;
+  height: 47dvh;
   background-color: #cdc1a3;
   background-image: url('/../images/bg.svg');
   background-blend-mode: overlay;
@@ -29,29 +29,55 @@
 .image {
   display: block;
   bottom: -30px;
-  //width: 100%;
   max-height: 100%;
   right: -30px;
-  //top: 0;
   position: absolute;
-  //margin: 0 0 -30px 0;
-  //width: 100%;
   z-index: 0;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1300px) {
+  .image {
+    max-height: 90%;
+  }
+}
+
+@media (max-width: 1250px) {
   .bg {
     height: 80dvh;
-    //padding: 18px 28px;
+    max-height: 1000px;
+  }
+
+  .mobile {
+    display: block;
+    bottom: -40px;
+    max-height: 70%;
+    right: -30px;
+    position: absolute;
+    z-index: 0;
   }
 
   .image {
-    width: 150%;
+    display: none;
+  }
+
+  .wrapper {
+    height: 80dvh;
   }
 }
 
 @media (max-width: 720px) {
   .bg {
-    padding: 18px 28px;
+    height: 80dvh;
+    max-height: 850px;
+  }
+
+  .mobile {
+    max-height: 50%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .mobile {
+    display: none;
   }
 }

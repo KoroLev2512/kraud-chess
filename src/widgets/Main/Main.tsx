@@ -10,9 +10,14 @@ export const Main = () => {
                 <img
                     src='/images/bg-image.svg'
                     alt="Background Image"
-                    className={styles.image}
+                    className={styles.mobile}
                 />
                 <div className={styles.wrapper}>
+                    <img
+                        src='/images/bg-image.svg'
+                        alt="Background Image"
+                        className={styles.image}
+                    />
                     <Header/>
                     <div className={styles.content}>
                         <Content/>
