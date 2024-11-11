@@ -1,29 +1,21 @@
-@import "../../app/styles/variables";
-@import "../../app/styles/colors";
-@import "../../app/styles/mixins";
-
-.hero {
-  overflow-x: hidden;
-  width: 100%;
-  color: var(--white-color);
-  transition: all 200ms;
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 72px 72px;
 }
 
-.bg {
-  background-image: url('wave.png');
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: contain;
-}
-
-.carouselContainer {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.header {
-  margin: 20px;
+.title {
+  display: flex;
+  justify-content: space-between;
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Merriweather, serif;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  padding-bottom: 60px;
 }
 
 .features {
@@ -34,29 +26,15 @@
 }
 
 .content {
-  max-width: 1440px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  gap: 100px;
-}
-
-.title {
-  max-width: 570px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-inline: 120px;
-  color: var(--white-color);
 }
 
 .image {
-  padding-inline-end: 120px;
-  padding-top: 44px;
-  width: 453px;
-  height: 439px;
+  margin: 0;
+  width: 80%;
+  height: 10%;
 }
 
 .image img {
@@ -66,84 +44,115 @@
   object-fit: cover;
 }
 
+.name {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  padding: 28px 0 6px;
+}
+
+.rank {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.6;
+  padding-bottom: 20px;
+}
+
 .controls {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
-  height: 40px;
-  padding: 40px 0;
-  text-align: center;
+  text-align: right;
+  align-items: center;
 }
 
-.arrow {
+.fraction {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.arrowNext {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
   cursor: pointer;
-  padding: 10px 14px 10px 15px;
+  margin: 10px;
+  gap: 30px;
+
+  &:hover {
+    svg circle {
+      fill: #FBCE51;
+    }
+  }
+}
+
+.arrowPrev {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  gap: 30px;
+
+  &:hover {
+    svg circle {
+      fill: #FBCE51;
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.button {
+  display: inline-flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  border-radius: 10px;
-  border: 1px solid #FFF;
-  margin: 5px;
-}
-
-@media (max-width: 1400px) {
-  .content {
-    align-items: center;
-    gap: 30px;
-  }
-
-  .title {
-    font-size: 40px;
-    padding: 0  0 0 40px;
-    margin-left: auto
-  }
-
-  .image {
-    padding: 0 40px 0 0;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 1100px) {
-  .title {
-    font-size: 32px;
-    padding-inline: 60px;
-  }
-
-  .content {
-    gap: 0;
-  }
-
-  .image {
-    max-height: 350px;
-  }
-}
-
-@media (max-width: 900px) {
-  .title {
-    font-size: 30px;
-    padding-inline: 60px;
-  }
-
-  .image {
-    max-height: 300px;
-  }
+  border-radius: 62px;
+  border: 1px solid #3057A2;
+  color: #3057A2;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  background-color: transparent;
 }
 
 @media (max-width: 720px) {
   .title {
-    font-size: 24px;
-    margin: 0 40px 20px 40px;
-    padding-inline: 0;
+
   }
 
   .content {
-    display: flex;
-    flex-direction: column;
+
   }
 
   .image {
     width: 80%;
-    padding: 0;
-    margin: 0 auto;
   }
 }

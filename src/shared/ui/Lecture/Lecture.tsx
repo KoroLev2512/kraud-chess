@@ -11,9 +11,9 @@ export const Lecture = () => {
                 <div>
                     посетите лекцию на тему:
                 </div>
-                <div className={styles.red}>
+                <span className={styles.red}>
                     «Плодотворная дебютная идея»
-                </div>
+                </span>
             </div>
             <img
                 className={styles.image}

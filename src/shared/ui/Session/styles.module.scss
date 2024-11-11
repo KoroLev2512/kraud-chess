@@ -1,4 +1,91 @@
 .wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding-top: 40px;
+  margin: 0 auto;
+  gap: 44px;
+  max-width: 1400px;
+}
+
+.text {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Merriweather, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  text-transform: uppercase;
+  padding-bottom: 44px;
+}
+
+.image {
+  margin-left: -40px;
+}
+
+.red {
+  color: #F54932;
+  font-weight: 700;
+}
+
+.table {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table td {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  vertical-align: top;
+  width: 30dvw;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.table td:first-child {
+  color: #666;
+  width: 60%;
+  border-right: 1px solid #ddd;
+}
+
+.table td:last-child {
+  padding-left: 20px;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table .oldPrice {
+  text-decoration: line-through;
+  text-decoration-color: #F54932;
+  color: #000;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.contact {
+  margin-top: 32px;
+  color: #3057A2;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.label {
+  opacity: 0.7;
+  font-weight: 400;
 }

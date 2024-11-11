@@ -9,7 +9,7 @@
 
 .wrapper {
   display: inline-flex;
-  padding: 18px 12px;
+  padding: 18px 0;
   align-items: center;
   background: #F54932;
   width: 100dvw;
@@ -22,7 +22,7 @@
   line-height: 110%;
   text-transform: uppercase;
   white-space: nowrap;
-  overflow: hidden; /* Ensure the text doesn't overflow the container */
+  overflow: hidden;
 }
 
 .marquee {

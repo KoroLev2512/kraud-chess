@@ -1,0 +1,97 @@
+.wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 120px 72px;
+}
+
+.title {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Merriweather, serif;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 800px;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: 400;
+  color: #3057A2;
+  margin-bottom: 30px;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-style: normal;
+  line-height: 120%;
+  margin-left: 10px;
+  text-transform: none;
+}
+
+.transformationStages {
+  text-align: center;
+  font-family: Merriweather, serif;
+}
+
+.stagesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 3 / 4; }
+.div4 { grid-area: 2 / 1 / 3 / 2; }
+.div5 { grid-area: 2 / 2 / 3 / 3; }
+.div6 { grid-area: 3 / 1 / 4 / 2; }
+.div7 { grid-area: 3 / 2 / 4 / 4; }
+
+.stageCard {
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  background-color: #f5f0e6;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+}
+
+.stageNumber {
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: #313131;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Golos Text", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.stageCard p {
+  margin: 0;
+  padding-left: 52px;
+  color: #313131;
+  font-size: 18px;
+  line-height: 1.4;
+}
