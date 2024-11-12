@@ -3,7 +3,6 @@
 
 .bg {
   position: relative;
-  //height: 47dvh;
   background-color: #cdc1a3;
   background-image: url('/../images/bg.svg');
   background-blend-mode: overlay;
@@ -43,7 +42,7 @@
 
 @media (max-width: 1250px) {
   .bg {
-    height: 80dvh;
+    min-height: 80dvh;
     max-height: 1200px;
   }
 
