@@ -107,13 +107,13 @@ export const Stages = () => {
                         <div className={`${styles.stageCard} ${stage.className}`} key={stage.id}>
                             <div className={styles.stageNumber}>{stage.id}</div>
                             <p>{stage.text}</p>
-                            {/*{stage.image &&*/}
-                            {/*    <img */}
-                            {/*        className={styles.image}*/}
-                            {/*        src={stage.image}*/}
-                            {/*        alt={`Stage ${stage.id}`*/}
-                            {/*    }*/}
-                            {/*/>}*/}
+                            {stage.image &&
+                                <img
+                                    className={styles.image}
+                                    src={stage.image}
+                                    alt={`Stage ${stage.id}`
+                                }
+                            />}
                         </div>
                     ))}
                 </div>

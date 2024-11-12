@@ -54,6 +54,10 @@
 .div6 { grid-area: 3 / 1 / 4 / 2; }
 .div7 { grid-area: 3 / 2 / 4 / 4; }
 
+.div7 p {
+  width: 50%;
+}
+
 .stageCard {
   display: flex;
   align-items: center;
@@ -104,8 +108,9 @@
 }
 
 .stageCard img {
-  margin-left: 10px;
-  height: auto;
+  position: absolute;
+  left: 60%;
+  bottom: 0;
 }
 
 @media (max-width: 1000px) {
