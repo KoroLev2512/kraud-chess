@@ -181,7 +181,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .title {
@@ -212,6 +212,38 @@
 
   .dot.active {
     background-color: #313131;
+  }
+
+  .arrowNext {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px;
+    gap: 30px;
+
+    &:hover {
+      svg circle {
+        fill: #FBCE51;
+      }
+    }
+  }
+
+  .arrowPrev {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px;
+    gap: 30px;
+
+    &:hover {
+      svg circle {
+        fill: #FBCE51;
+      }
+    }
   }
 }
 

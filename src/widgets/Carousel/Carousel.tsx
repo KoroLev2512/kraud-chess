@@ -100,6 +100,27 @@ export const Carousel: React.FC<CarouselProps> = ({slides}) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div className={styles.mobileControls}>
+                <div
+                    className={styles.arrowPrev}
+                    onClick={!isPrevDisabled ? handlePreviousSlide : undefined}
+                >
+                    <ArrowPrevIcon
+                        fill={isPrevDisabled ? "#D6D6D6" : "#313131"}
+                    />
+                </div>
+                <span className={styles.fraction}>
+                        {activeSlideIndex + 1}/{slides.length}
+                    </span>
+                <div
+                    className={styles.arrowNext}
+                    onClick={!isNextDisabled ? handleNextSlide : undefined}
+                >
+                    <ArrowNextIcon
+                        fill={isNextDisabled ? "#D6D6D6" : "#313131"}
+                    />
+                </div>
+            </div>
         </div>
     );
 };
