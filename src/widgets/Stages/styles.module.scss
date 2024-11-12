@@ -75,7 +75,6 @@
   text-align: left;
 }
 
-
 .stageNumber {
   background-color: white;
   width: 32px;
@@ -119,7 +118,9 @@
   }
 
   .carouselContainer {
-    padding: 20px 0;
+    margin-top: 170px;
+    background-color: rgba(205, 193, 163, 0.9);
+    background-image: url('/../images/cardBG.svg');
   }
 
   .slide {
@@ -130,44 +131,42 @@
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-    background-color: #f5f0e6;
-    padding: 60px 24px 0 72px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 100%;
-    min-height: 300px;
-    margin-bottom: 28px;
-    background-color: rgba(205, 193, 163, 0.9);
-    background-image: url('/../images/cardBG.svg');  }
-
-  .stageSlide {
-    display: flex;
-
-    //display: flex;
-    //font-family: "Golos Text", serif;
-    //font-size: 20px;
-    //font-style: normal;
-    //font-weight: 500;
-    //line-height: 120%;
-    //background-color: #f5f0e6;
-    //padding: 60px 24px 0 72px;
-    //border-radius: 8px;
-    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    //text-align: left;
-    //width: 100%;
-    //min-height: 300px;
-    //margin-bottom: 28px;
-    //background-color: rgba(205, 193, 163, 0.9);
-    //background-image: url('/../images/cardBG.svg');
+    height: 40dvh;
   }
 
-  .stageNumber {
-    margin-top: 45px;
-    font-size: 18px;
+  .stageSlideFirst {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 24px 0 20px;
+  }
+
+  .stageSlideSecond {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 24px 72px 20px;
+  }
+
+  .stageFirstNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-right: 20px;
     width: 32px;
     height: 32px;
+    border-radius: 60px;
+  }
+
+  .stageSecondNumber {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-right: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 60px;
     margin-bottom: 10px;
   }
 
@@ -182,19 +181,61 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 20px;
   }
 
   .title {
     margin: 0;
   }
+
+  .plane {
+    position: absolute;
+    z-index: 2;
+    left: 30dvw;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #D6D6D6;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color: #313131;
+  }
 }
+
+@media (max-width: 700px) {
+  .plane {
+    left: 20dvw;
+  }
+}
+
 
 @media (min-width:1000px) {
   .controls {
     display: none;
   }
 
-  .stageSlide {
+  .stageSlideFirst {
+    display: none;
+  }
+
+  .stageSlideSecond {
+    display: none;
+  }
+
+  .plane {
     display: none;
   }
 }

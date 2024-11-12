@@ -8,13 +8,13 @@ export const Main = () => {
         <>
             <div className={styles.bg}>
                 <img
-                    src='/images/bg-image.svg'
+                    src='/images/headerBG.svg'
                     alt="Background Image"
                     className={styles.mobile}
                 />
                 <div className={styles.wrapper}>
                     <img
-                        src='/images/bg-image.svg'
+                        src='/images/headerBG.svg'
                         alt="Background Image"
                         className={styles.image}
                     />

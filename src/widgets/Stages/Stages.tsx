@@ -34,32 +34,39 @@ export const Stages = () => {
     ];
 
     const mobileStages = [
-        // [
-        //
-        // ]
-        {id: 1, text: "Строительство железнодорожной магистрали Москва-Васюки", className: styles.div1},
-        {
-            id: 2,
-            text: "Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов",
-            className: styles.div2
-        },
-        {
-            id: 3,
-            text: "Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет",
-            className: styles.div3
-        },
-        {id: 4, text: "Строительство дворца для турнира", className: styles.div4},
-        {id: 5, text: "Размещение гаражей для гостевого автотранспорта", className: styles.div5},
-        {
-            id: 6,
-            text: "Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов",
-            className: styles.div6
-        },
-        {
-            id: 7,
-            text: "Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анджелес и Мельбурн",
-            className: styles.div7
-        }
+        [
+            {id: 1, text: "Строительство железнодорожной магистрали Москва-Васюки", className: styles.div1},
+            {
+                id: 2,
+                text: "Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов",
+                className: styles.div2
+            }
+        ],
+        [
+            {
+                id: 3,
+                text: "Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет",
+                className: styles.div3
+            },
+        ],
+        [
+            {id: 4, text: "Строительство дворца для турнира", className: styles.div4},
+            {id: 5, text: "Размещение гаражей для гостевого автотранспорта", className: styles.div5},
+        ],
+        [
+            {
+                id: 6,
+                text: "Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов",
+                className: styles.div6
+            }
+        ],
+        [
+            {
+                id: 7,
+                text: "Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анджелес и Мельбурн",
+                className: styles.div7
+            }
+        ]
     ]
 
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -111,6 +118,11 @@ export const Stages = () => {
                     ))}
                 </div>
             </section>
+            <img
+                src="/images/plane.svg"
+                alt="plane"
+                className={styles.plane}
+            />
             <Swiper
                 navigation={{
                     nextEl: `.${styles.arrowNext}`,
@@ -125,21 +137,23 @@ export const Stages = () => {
                 onSwiper={setSwiperInstance}
                 speed={500}
             >
-                {stages.map((stage, index) => (
-                    <SwiperSlide key={stage.id} className={styles.slide}>
-                        <div className={styles.stageSlide}>
-                            <div className={styles.stageNumber}>{stage.id}</div>
-                            <div className={styles.text}>{stage.text}</div>
+                {mobileStages.map((stagePair, index) => (
+                    <SwiperSlide key={index} className={styles.slide}>
+                        <div className={styles.stageSlideFirst}>
+                            <div className={styles.stageFirstNumber}>{stagePair[0].id}</div>
+                            <div className={styles.text}>{stagePair[0].text}</div>
                         </div>
-                        <div className={styles.stageSlide}>
-                            <div className={styles.stageNumber}>{stage.id}</div>
-                            <div className={styles.text}>{stage.text}</div>
-                        </div>
+                        {stagePair[1] && (
+                            <div className={styles.stageSlideSecond}>
+                                <div className={styles.stageSecondNumber}>{stagePair[1].id}</div>
+                                <div className={styles.text}>{stagePair[1].text}</div>
+                            </div>
+                        )}
                     </SwiperSlide>
                 ))}
             </Swiper>
             <div className={styles.controls}>
-            <div
+                <div
                     className={styles.arrowPrev}
                     onClick={!isPrevDisabled ? handlePreviousSlide : undefined}
                 >
@@ -148,7 +162,12 @@ export const Stages = () => {
                     />
                 </div>
                 <div className={styles.pagination}>
-
+                    {mobileStages.map((_, index) => (
+                        <span
+                            key={index}
+                            className={`${styles.dot} ${index === activeSlideIndex ? styles.active : ''}`}
+                        ></span>
+                    ))}
                 </div>
                 <div
                     className={styles.arrowNext}
