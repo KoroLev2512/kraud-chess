@@ -123,11 +123,8 @@
   }
 
   .slide {
-    width: 100%;
-  }
-
-  .stageSlide {
     display: flex;
+    flex-direction: column;
     font-family: "Golos Text", serif;
     font-size: 20px;
     font-style: normal;
@@ -141,6 +138,28 @@
     width: 100%;
     min-height: 300px;
     margin-bottom: 28px;
+    background-color: rgba(205, 193, 163, 0.9);
+    background-image: url('/../images/cardBG.svg');  }
+
+  .stageSlide {
+    display: flex;
+
+    //display: flex;
+    //font-family: "Golos Text", serif;
+    //font-size: 20px;
+    //font-style: normal;
+    //font-weight: 500;
+    //line-height: 120%;
+    //background-color: #f5f0e6;
+    //padding: 60px 24px 0 72px;
+    //border-radius: 8px;
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    //text-align: left;
+    //width: 100%;
+    //min-height: 300px;
+    //margin-bottom: 28px;
+    //background-color: rgba(205, 193, 163, 0.9);
+    //background-image: url('/../images/cardBG.svg');
   }
 
   .stageNumber {

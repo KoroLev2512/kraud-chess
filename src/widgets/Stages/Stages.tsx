@@ -34,6 +34,9 @@ export const Stages = () => {
     ];
 
     const mobileStages = [
+        // [
+        //
+        // ]
         {id: 1, text: "Строительство железнодорожной магистрали Москва-Васюки", className: styles.div1},
         {
             id: 2,
@@ -128,11 +131,15 @@ export const Stages = () => {
                             <div className={styles.stageNumber}>{stage.id}</div>
                             <div className={styles.text}>{stage.text}</div>
                         </div>
+                        <div className={styles.stageSlide}>
+                            <div className={styles.stageNumber}>{stage.id}</div>
+                            <div className={styles.text}>{stage.text}</div>
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
             <div className={styles.controls}>
-                <div
+            <div
                     className={styles.arrowPrev}
                     onClick={!isPrevDisabled ? handlePreviousSlide : undefined}
                 >
