@@ -1,7 +1,7 @@
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 72px 72px;
+  padding: 0 72px 140px;
 }
 
 .title {
@@ -148,6 +148,7 @@
     background-color: #3057A2;
   }
 }
+
 .mobileСontrols {
   display: none;
 }
@@ -169,5 +170,11 @@
     display: flex;
     justify-content: center;
     margin-top: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mobileControls {
+    display: none;
   }
 }
