@@ -5,9 +5,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {CarouselSlide} from '@/widgets/types';
-import styles from './styles.module.scss';
 import ArrowNextIcon from "@/shared/lib/icons/ArrowNextIcon";
 import ArrowPrevIcon from "@/shared/lib/icons/ArrowPrevIcon";
+import styles from './styles.module.scss';
 
 interface CarouselProps {
     slides: CarouselSlide[];

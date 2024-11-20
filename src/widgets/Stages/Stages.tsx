@@ -1,74 +1,18 @@
 import React, {useState} from 'react';
-import styles from "./styles.module.scss";
 import {Swiper as SwiperType} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
 import ArrowPrevIcon from "@/shared/lib/icons/ArrowPrevIcon";
 import ArrowNextIcon from "@/shared/lib/icons/ArrowNextIcon";
+import {CarouselStage, CarouselMobileStage} from "@/widgets/types";
+import {StageSlide} from './StageSlide';
+import styles from "./styles.module.scss";
 
-export const Stages = () => {
-    const stages = [
-        {id: 1, text: "Строительство железнодорожной магистрали Москва-Васюки", className: styles.div1},
-        {
-            id: 2,
-            text: "Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов",
-            className: styles.div2
-        },
-        {
-            id: 3,
-            text: "Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет",
-            className: styles.div3
-        },
-        {id: 4, text: "Строительство дворца для турнира", className: styles.div4},
-        {id: 5, text: "Размещение гаражей для гостевого автотранспорта", className: styles.div5},
-        {
-            id: 6,
-            text: "Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов",
-            className: styles.div6
-        },
-        {
-            id: 7,
-            text: "Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анджелес и Мельбурн",
-            className: styles.div7,
-            image: "/images/plane.svg"
-        }
-    ];
+interface StagesProps {
+    stages: CarouselStage[];
+    mobileStages: CarouselMobileStage[];
+}
 
-    const mobileStages = [
-        [
-            {id: 1, text: "Строительство железнодорожной магистрали Москва-Васюки", className: styles.div1},
-            {
-                id: 2,
-                text: "Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов",
-                className: styles.div2
-            }
-        ],
-        [
-            {
-                id: 3,
-                text: "Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет",
-                className: styles.div3
-            },
-        ],
-        [
-            {id: 4, text: "Строительство дворца для турнира", className: styles.div4},
-            {id: 5, text: "Размещение гаражей для гостевого автотранспорта", className: styles.div5},
-        ],
-        [
-            {
-                id: 6,
-                text: "Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов",
-                className: styles.div6
-            }
-        ],
-        [
-            {
-                id: 7,
-                text: "Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анджелес и Мельбурн",
-                className: styles.div7
-            }
-        ]
-    ]
-
+export const Stages: React.FC<StagesProps> = ({stages, mobileStages}) => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
@@ -90,8 +34,7 @@ export const Stages = () => {
     };
 
     const isPrevDisabled = activeSlideIndex === 0;
-    const isNextDisabled = activeSlideIndex === mobileStages.length - 1;
-
+    const isNextDisabled = mobileStages.length === 0 || activeSlideIndex === mobileStages.length - 1;
 
     return (
         <div className={styles.wrapper}>
@@ -111,9 +54,9 @@ export const Stages = () => {
                                 <img
                                     className={styles.image}
                                     src={stage.image}
-                                    alt={`Stage ${stage.id}`
-                                }
-                            />}
+                                    alt={`Stage ${stage.id}`}
+                                />
+                            }
                         </div>
                     ))}
                 </div>
@@ -137,17 +80,13 @@ export const Stages = () => {
                 onSwiper={setSwiperInstance}
                 speed={500}
             >
-                {mobileStages.map((stagePair, index) => (
+                {mobileStages.map((stageGroup, index) => (
                     <SwiperSlide key={index} className={styles.slide}>
-                        <div className={styles.stageSlideFirst}>
-                            <div className={styles.stageFirstNumber}>{stagePair[0].id}</div>
-                            <div className={styles.text}>{stagePair[0].text}</div>
-                        </div>
-                        {stagePair[1] && (
-                            <div className={styles.stageSlideSecond}>
-                                <div className={styles.stageSecondNumber}>{stagePair[1].id}</div>
-                                <div className={styles.text}>{stagePair[1].text}</div>
-                            </div>
+                        {stageGroup.stages[0] && (
+                            <StageSlide stage={stageGroup.stages[0]} className={styles.stageSlideFirst}/>
+                        )}
+                        {stageGroup.stages[1] && (
+                            <StageSlide stage={stageGroup.stages[1]} className={styles.stageSlideSecond}/>
                         )}
                     </SwiperSlide>
                 ))}

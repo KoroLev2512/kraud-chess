@@ -1,5 +1,4 @@
 import React from "react";
-import {getSvgOptions} from "@/shared/lib/utils/iconHelper";
 import {IconProps} from "./types";
 
 const ArrowIcon = (
@@ -9,9 +8,6 @@ const ArrowIcon = (
         width = 44,
         rotation = 180,
     }: IconProps) => {
-    const svgOptions = getSvgOptions({
-        rotationDegree: rotation,
-    });
 
     return (
         <svg
@@ -36,6 +32,8 @@ const ArrowIcon = (
                     stroke="white"
                     stroke-width="2"
                     stroke-linecap="square"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </g>
         </svg>
