@@ -17,7 +17,7 @@ export const Lecture = () => {
             </div>
             <img
                 className={styles.image}
-                src="/images/lecture.svg"
+                src="/images/lecture.png"
                 alt="lecture"
             />
             <div className={styles.mobile}>
