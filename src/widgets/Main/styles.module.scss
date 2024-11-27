@@ -41,15 +41,10 @@
 }
 
 @media (max-width: 1250px) {
-  .bg {
-    min-height: 80dvh;
-    max-height: 1200px;
-  }
-
   .mobile {
     display: block;
     bottom: -40px;
-    max-height: 70%;
+    max-height: 80%;
     right: -30px;
     position: absolute;
     z-index: 0;
@@ -60,7 +55,7 @@
   }
 
   .wrapper {
-    height: 90dvh;
+    height: 80dvh;
   }
 }
 
@@ -68,19 +63,44 @@
   .mobile {
     max-height: 60%;
   }
+
+  .wrapper {
+    height: 90dvh;
+  }
 }
 
 @media (max-width: 720px) {
   .bg {
     padding: 0 20px;
-    height: 80dvh;
-    max-height: 850px;
+    max-height: 100dvh;
   }
 
   .mobile {
-    max-height: 60%;
+    height: 45%;
+    right: 0;
   }
 }
+
+@media (max-width: 380px) {
+  .bg {
+    height: 130dvh;
+  }
+
+  .mobile {
+    max-width: 200%;
+    height: 45%;
+    right: -5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .mobile {
+    max-width: 200%;
+    height: 40%;
+    right: -25px;
+  }
+}
+
 
 @media (min-width: 1250px) {
   .mobile {

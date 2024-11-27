@@ -7,9 +7,9 @@ interface StageSlideProps {
     className: string;
 }
 
-export const StageSlide: React.FC<StageSlideProps> = ({ stage, className }) => (
+export const StageMobileSlide: React.FC<StageSlideProps> = ({ stage, className }) => (
     <div className={className}>
-        <div className={styles.stageFirstNumber}>{stage.id}</div>
+        <div className={styles.stageNumber}>{stage.id}</div>
         <div className={styles.text}>{stage.text}</div>
     </div>
 );

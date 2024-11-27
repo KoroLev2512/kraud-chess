@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ArrowPrevIcon from "@/shared/lib/icons/ArrowPrevIcon";
 import ArrowNextIcon from "@/shared/lib/icons/ArrowNextIcon";
 import { CarouselStage, CarouselMobileStage } from "@/widgets/types";
-import { StageSlide } from './StageSlide';
+import { StageSlide,  } from './StageSlide';
 import styles from "./styles.module.scss";
 
 interface StagesProps {
