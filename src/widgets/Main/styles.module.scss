@@ -64,8 +64,15 @@
   }
 }
 
+@media (max-width: 900px) {
+  .mobile {
+    max-height: 60%;
+  }
+}
+
 @media (max-width: 720px) {
   .bg {
+    padding: 0 20px;
     height: 80dvh;
     max-height: 850px;
   }

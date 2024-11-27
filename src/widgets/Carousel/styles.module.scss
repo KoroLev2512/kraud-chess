@@ -171,6 +171,14 @@
     justify-content: center;
     margin-top: 40px;
   }
+
+  .title {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0;
+  }
 }
 
 @media (min-width: 1000px) {

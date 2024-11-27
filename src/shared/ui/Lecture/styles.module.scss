@@ -24,7 +24,9 @@
 }
 
 .image {
-  max-width: 800px;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 1000px) {
@@ -37,7 +39,10 @@
   }
 
   .image {
+    margin: 0 auto;
     max-width: 600px;
+    height: auto;
+    object-fit: contain;
   }
 
   .full {
@@ -54,6 +59,12 @@
     line-height: 135%;
     text-transform: uppercase;
     padding-top: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .image {
+    margin: 0;
   }
 }
 

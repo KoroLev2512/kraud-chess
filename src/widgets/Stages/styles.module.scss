@@ -113,6 +113,16 @@
   bottom: 0;
 }
 
+@media (max-width: 1400px) {
+  .stageCard img {
+    left: 50%;
+  }
+
+  .div7 p {
+    width: 40%;
+  }
+}
+
 @media (max-width: 1000px) {
   .wrapper {
     padding: 20px;
@@ -190,13 +200,27 @@
   }
 
   .title {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 110%;
     margin: 0;
+  }
+
+  .description {
+    color: #3057A2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
   }
 
   .plane {
     position: absolute;
     z-index: 2;
-    left: 30dvw;
+    //left: 30dvw;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .pagination {
@@ -227,13 +251,13 @@
     cursor: pointer;
     margin: 10px;
     gap: 30px;
+  }
 
     //&:hover {
     //  svg circle {
     //    fill: #FBCE51;
     //  }
     //}
-  }
 
   .arrowPrev {
     width: 44px;
@@ -243,21 +267,24 @@
     cursor: pointer;
     margin: 10px;
     gap: 30px;
+  }
 
   //  &:hover {
   //    svg circle {
   //      fill: #FBCE51;
   //    }
   //  }
-  }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  .carouselContainer {
+    margin-top: 140px;
+  }
+
   .plane {
-    left: 20dvw;
+    max-width: 300px;
   }
 }
-
 
 @media (min-width:1000px) {
   .controls {

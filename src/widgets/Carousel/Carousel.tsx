@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import {Swiper as SwiperType} from 'swiper';
+import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import {CarouselSlide} from '@/widgets/types';
+import { CarouselSlide } from '@/widgets/types';
 import ArrowNextIcon from "@/shared/lib/icons/ArrowNextIcon";
 import ArrowPrevIcon from "@/shared/lib/icons/ArrowPrevIcon";
 import styles from './styles.module.scss';
@@ -13,9 +13,10 @@ interface CarouselProps {
     slides: CarouselSlide[];
 }
 
-export const Carousel: React.FC<CarouselProps> = ({slides}) => {
+export const Carousel: React.FC<CarouselProps> = ({ slides }) => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
+    const [slidesPerView, setSlidesPerView] = useState(1);
 
     const handleSlideChange = (swiper: SwiperType) => {
         const realIndex = swiper.realIndex;
@@ -35,7 +36,13 @@ export const Carousel: React.FC<CarouselProps> = ({slides}) => {
     };
 
     const isPrevDisabled = activeSlideIndex === 0;
-    const isNextDisabled = activeSlideIndex === slides.length - 1;
+    const isNextDisabled = activeSlideIndex === slides.length - slidesPerView;
+
+    useEffect(() => {
+        if (swiperInstance) {
+            setSlidesPerView(swiperInstance.params.slidesPerView as number);
+        }
+    }, [swiperInstance]);
 
     return (
         <div className={styles.wrapper}>
@@ -51,7 +58,7 @@ export const Carousel: React.FC<CarouselProps> = ({slides}) => {
                         />
                     </div>
                     <span className={styles.fraction}>
-                        {activeSlideIndex + 1}/{slides.length}
+                        {activeSlideIndex + 1}/{slides.length - (slidesPerView >= 3 ? 2 : slidesPerView >= 2 ? 1 : 0)}
                     </span>
                     <div
                         className={styles.arrowNext}
@@ -69,12 +76,12 @@ export const Carousel: React.FC<CarouselProps> = ({slides}) => {
                     prevEl: `.${styles.arrowPrev}`,
                 }}
                 loop={false}
-                autoplay={{delay: 5000, disableOnInteraction: false}}
-                pagination={{clickable: true}}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
                 breakpoints={{
-                    520: {slidesPerView: 1},
-                    720: {slidesPerView: 2},
-                    960: {slidesPerView: 3},
+                    520: { slidesPerView: 1 },
+                    720: { slidesPerView: 2 },
+                    960: { slidesPerView: 3 },
                 }}
                 className={styles.carouselContainer}
                 onSlideChange={handleSlideChange}
@@ -110,8 +117,8 @@ export const Carousel: React.FC<CarouselProps> = ({slides}) => {
                     />
                 </div>
                 <span className={styles.fraction}>
-                        {activeSlideIndex + 1}/{slides.length}
-                    </span>
+                    {activeSlideIndex + 1}/{slides.length - (slidesPerView >= 3 ? 2 : slidesPerView >= 2 ? 1 : 0)}
+                </span>
                 <div
                     className={styles.arrowNext}
                     onClick={!isNextDisabled ? handleNextSlide : undefined}

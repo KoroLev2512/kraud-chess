@@ -1,29 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Image alt](https://github.com/KoroLev2512/kraud-chess/blob/main/public/icons/logo.svg)
 
-## Getting Started
+# MWS: your solution in the digital world
 
-First, run the development server:
+Look at the [NextJS documentation](https://nextjs.org/docs) and [React documentation](https://nextjs.org/docs) to learn more info about stack.
+
+## Setup
+
+Make sure to install the dependencies:
 
 ```bash
+# npm
+npm install
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+```
+
+## Development Server
+
+Start the development server:
+
+```bash
+# npm
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/pages/index.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project uses MontserratAlternates local fonts.
+
+## Pages
+
+1. Home page
+
+## Interface Components
+
+- Header
+- Table
+- Checkboxes
+- Filter buttons
+- Language flag
+- Footer
+
+## Status
+
+At the moment, the project is under development. We are testing the MVP version.
+
+## Contacts
+
+To contact about the project, you can write to [me](https://t.me/korolev_2512).
+
+## Gratitude
+
+We are grateful to the React and Next teams for the React and Next.js frameworks.
 
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
+- [React documentation](https://nextjs.org/docs) - learn about React features and components.
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
