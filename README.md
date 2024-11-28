@@ -1,6 +1,6 @@
 ![Image alt](https://github.com/KoroLev2512/kraud-chess/blob/main/public/icons/logo.svg)
 
-# MWS: your solution in the digital world
+# Four horses club: the best chess club in the world
 
 Look at the [NextJS documentation](https://nextjs.org/docs) and [React documentation](https://nextjs.org/docs) to learn more info about stack.
 
@@ -44,15 +44,15 @@ This project uses MontserratAlternates local fonts.
 ## Interface Components
 
 - Header
-- Table
-- Checkboxes
-- Filter buttons
-- Language flag
+- Running line
+- Adaptive table
+- Grid stages with mobile carousel
+- Adaptive participants carousel
 - Footer
 
 ## Status
 
-At the moment, the project is under development. We are testing the MVP version.
+Ready layout for website update.
 
 ## Contacts
 
@@ -60,7 +60,7 @@ To contact about the project, you can write to [me](https://t.me/korolev_2512).
 
 ## Gratitude
 
-We are grateful to the React and Next teams for the React and Next.js frameworks.
+Grateful to the React and Next teams for the React and Next.js frameworks.
 
 ## Learn More
 
