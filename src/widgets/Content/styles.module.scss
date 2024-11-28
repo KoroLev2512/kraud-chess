@@ -111,3 +111,27 @@
     height: 47px;
   }
 }
+
+@media (hover: hover) {
+  .support:hover {
+    background-color: #FBCE51;
+    border: #FBCE51;
+  }
+
+  .more:hover {
+    background-color: transparent;
+    color: black;
+  }
+}
+
+@media (hover: none) {
+  .support:active {
+    background-color: #FBCE51;
+    border: #FBCE51;
+  }
+
+  .more:hover {
+    background-color: initial;
+    color: initial;
+  }
+}

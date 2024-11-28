@@ -1,10 +1,10 @@
-import React, { useState, memo } from 'react';
-import { Swiper as SwiperType } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, {useState, memo} from 'react';
+import {Swiper as SwiperType} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
 import ArrowPrevIcon from "@/shared/lib/icons/ArrowPrevIcon";
 import ArrowNextIcon from "@/shared/lib/icons/ArrowNextIcon";
-import { CarouselStage, CarouselMobileStage } from "@/widgets/types";
-import { StageSlide,  } from './StageSlide';
+import {CarouselStage, CarouselMobileStage} from "@/widgets/types";
+import {StageSlide,} from './StageSlide';
 import styles from "./styles.module.scss";
 
 interface StagesProps {
@@ -18,13 +18,13 @@ interface DotProps {
     styles: { readonly [key: string]: string };
 }
 
-const Dot: React.FC<DotProps> = memo(({ index, activeSlideIndex, styles }) => (
+const Dot: React.FC<DotProps> = memo(({index, activeSlideIndex, styles}) => (
     <span
         className={`${styles.dot} ${index === activeSlideIndex ? styles.active : ''}`}
     ></span>
 ));
 
-export const Stages: React.FC<StagesProps> = ({ stages, mobileStages }) => {
+export const Stages: React.FC<StagesProps> = ({stages, mobileStages}) => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
@@ -84,8 +84,8 @@ export const Stages: React.FC<StagesProps> = ({ stages, mobileStages }) => {
                     prevEl: `.${styles.arrowPrev}`,
                 }}
                 loop={false}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
-                pagination={{ clickable: true, el: `.${styles.pagination}` }}
+                autoplay={{delay: 5000, disableOnInteraction: false}}
+                pagination={{clickable: true, el: `.${styles.pagination}`}}
                 slidesPerView={1}
                 className={styles.carouselContainer}
                 onSlideChange={handleSlideChange}
@@ -95,10 +95,10 @@ export const Stages: React.FC<StagesProps> = ({ stages, mobileStages }) => {
                 {mobileStages.map((stageGroup, index) => (
                     <SwiperSlide key={index} className={styles.slide}>
                         {stageGroup.stages[0] && (
-                            <StageSlide stage={stageGroup.stages[0]} className={styles.stageSlideFirst} />
+                            <StageSlide stage={stageGroup.stages[0]} className={styles.stageSlideFirst}/>
                         )}
                         {stageGroup.stages[1] && (
-                            <StageSlide stage={stageGroup.stages[1]} className={styles.stageSlideSecond} />
+                            <StageSlide stage={stageGroup.stages[1]} className={styles.stageSlideSecond}/>
                         )}
                     </SwiperSlide>
                 ))}

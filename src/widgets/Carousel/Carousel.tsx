@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from 'swiper';
+import React, {useState, useEffect} from 'react';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Swiper as SwiperType} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { CarouselSlide } from '@/widgets/types';
+import {CarouselSlide} from '@/widgets/types';
 import ArrowNextIcon from "@/shared/lib/icons/ArrowNextIcon";
 import ArrowPrevIcon from "@/shared/lib/icons/ArrowPrevIcon";
 import styles from './styles.module.scss';
@@ -13,7 +13,7 @@ interface CarouselProps {
     slides: CarouselSlide[];
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+export const Carousel: React.FC<CarouselProps> = ({slides}) => {
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
     const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
     const [slidesPerView, setSlidesPerView] = useState(1);
@@ -76,12 +76,12 @@ export const Carousel: React.FC<CarouselProps> = ({ slides }) => {
                     prevEl: `.${styles.arrowPrev}`,
                 }}
                 loop={false}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
-                pagination={{ clickable: true }}
+                autoplay={{delay: 5000, disableOnInteraction: false}}
+                pagination={{clickable: true}}
                 breakpoints={{
-                    520: { slidesPerView: 1 },
-                    720: { slidesPerView: 2 },
-                    960: { slidesPerView: 3 },
+                    520: {slidesPerView: 1},
+                    720: {slidesPerView: 2},
+                    960: {slidesPerView: 3},
                 }}
                 className={styles.carouselContainer}
                 onSlideChange={handleSlideChange}

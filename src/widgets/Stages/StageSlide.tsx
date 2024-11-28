@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stage } from "@/widgets/types";
+import {Stage} from "@/widgets/types";
 import styles from "./styles.module.scss";
 
 interface StageSlideProps {
@@ -7,7 +7,7 @@ interface StageSlideProps {
     className: string;
 }
 
-export const StageSlide: React.FC<StageSlideProps> = ({ stage, className }) => (
+export const StageSlide: React.FC<StageSlideProps> = ({stage, className}) => (
     <div className={className}>
         <div className={styles.stageFirstNumber}>{stage.id}</div>
         <div className={styles.text}>{stage.text}</div>

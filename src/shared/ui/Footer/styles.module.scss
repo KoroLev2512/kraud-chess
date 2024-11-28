@@ -12,9 +12,11 @@
 
 .wrapper {
   display: flex;
+  flex-direction: column;
   max-width: 1400px;
   margin: 0 auto;
   padding: 72px 40px 72px 72px;
+  gap: 10px;
 }
 
 @media (max-width: 1000px) {

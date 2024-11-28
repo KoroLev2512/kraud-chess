@@ -186,3 +186,17 @@
     display: none;
   }
 }
+
+@media (hover: hover) {
+  .button:hover {
+    color: white;
+    background-color: #3057A2;
+  }
+}
+
+@media (hover: none) {
+  .button:hover {
+    color: #3057A2;
+    background-color: transparent;
+  }
+}
