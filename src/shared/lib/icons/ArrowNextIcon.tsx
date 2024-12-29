@@ -9,9 +9,6 @@ const ArrowNextIcon = (
         width = 44,
         rotation = 0,
     }: IconProps) => {
-    const svgOptions = getSvgOptions({
-        rotationDegree: rotation,
-    });
 
     return (
         <svg
@@ -33,8 +30,8 @@ const ArrowNextIcon = (
                     id="Vector 92"
                     d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615"
                     stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="square"
+                    strokeWidth="2"
+                    strokeLinecap="square"
                 />
             </g>
         </svg>
