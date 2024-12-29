@@ -103,24 +103,28 @@
     padding: 5px 20px;
     width: 100%;
     height: 47px;
+    cursor: pointer;
   }
 
   .more {
     padding: 5px 20px;
     width: 100%;
     height: 47px;
+    cursor: pointer;
   }
 }
 
 @media (hover: hover) {
   .support:hover {
-    background-color: #FBCE51;
+    background-color: #201c0d;
     border: #FBCE51;
+    cursor: pointer;
   }
 
   .more:hover {
     background-color: transparent;
     color: black;
+    cursor: pointer;
   }
 }
 
